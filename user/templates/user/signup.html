@@ -1,0 +1,51 @@
+{% load widget_tweaks %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Signup</title>
+
+    <!-- Bootstrap CSS and other stylesheets -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'css/tiny-slider.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+
+<!-- Centered Signup Form -->
+<form method="post" action="{% url 'signup' %}" class="signup-form bg-light rounded shadow-sm p-4" style="max-width: 600px; width: 100%;">
+    {% csrf_token %}
+
+    <!-- Username Field -->
+    <div class="form-group mb-3">
+        <label for="{{ form.username.id_for_label }}" class="fw-bold fs-5 text-dark">Username</label>
+        {{ form.username}}
+    </div>
+
+    <!-- email Field -->
+    <div class="form-group mb-3">
+        <label for="{{ form.email.id_for_label }}" class="fw-bold fs-5 text-dark">Email</label>
+       {{ form.email}}
+    </div>
+
+    <!-- Password Field 1 -->
+    <div class="form-group mb-3">
+        <label for="{{ form.password1.id_for_label }}" class="fw-bold fs-5 text-dark">Password</label>
+       {{ form.password1}}
+    </div>
+    
+    <!-- Password Field 2 -->
+    <div class="form-group mb-3">
+       <label for="{{ form.password2.id_for_label }}" class="fw-bold fs-5 text-dark">Confirm Password</label>
+        {{ form.password2}}
+    </div>
+    
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+</form>
+
+</body>
+</html>
