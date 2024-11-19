@@ -18,12 +18,16 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Welcome to my website!")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('App/',include('App.urls')),
     path('user/',include('user.urls')),
-    
+    path('', index, name='home'),  # Add this line for the root URL
     
 ]
 
