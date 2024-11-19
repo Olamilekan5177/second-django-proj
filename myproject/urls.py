@@ -24,5 +24,6 @@ urlpatterns = [
     path('App/',include('App.urls')),
     path('user/',include('user.urls')),
     
+    
 ]
 
