@@ -18,10 +18,10 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("Welcome to my website!")
+    return render(request, 'index.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
