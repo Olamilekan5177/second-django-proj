@@ -21,7 +21,7 @@ from django.contrib.auth import views as auth_views
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'App/index.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
