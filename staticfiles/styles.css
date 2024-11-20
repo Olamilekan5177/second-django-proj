@@ -1,0 +1,25 @@
+.custom-username:focus{
+    outline: none; /* Remove the default outline */
+    box-shadow: none; /* Remove the default focus ring (box-shadow) */
+    border: 2px solid rgb(113, 113, 249);
+}
+.custom-email:focus{
+   outline: none; /* Remove the default outline */
+    box-shadow: none; /* Remove the default focus ring (box-shadow) */
+    border: 2px solid rgb(113, 113, 249);
+}
+.custom-email:focus{
+   outline: none; /* Remove the default outline */
+    box-shadow: none; /* Remove the default focus ring (box-shadow) */
+    border: 2px solid rgb(113, 113, 249);
+}
+.custom-bio:focus{
+   outline: none; /* Remove the default outline */
+    box-shadow: none; /* Remove the default focus ring (box-shadow) */
+    border: 2px solid rgb(113, 113, 249);
+}
+.btn {
+    width: auto; /* Adjust button width */
+    padding-left: 20px;
+    padding-right: 20px;
+}
