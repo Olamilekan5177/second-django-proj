@@ -127,9 +127,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Only if needed for additional static file directories
+# Include static files from both apps
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'myapp/static'),
+    os.path.join(BASE_DIR, 'user/static'),
 ]
 
 # Default primary key field type
