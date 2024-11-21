@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!u6xvq8ku03bb(y*0w%aox9e$_p-0rj!awdgkrdt^7@zh-k+xb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django1-nine-self.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1']
 # 'django1-9od1hq33w-wahabs-projects-2573f690.vercel.app', 'django1-nine-self.vercel.app' '127.0.0.1'
 
 
@@ -127,11 +127,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Include static files from both apps
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'myapp/static'),
-    os.path.join(BASE_DIR, 'user/static'),
-]
+# Only if needed for additional static file directories
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
