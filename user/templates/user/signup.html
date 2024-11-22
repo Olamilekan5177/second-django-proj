@@ -23,29 +23,32 @@
     <!-- Username Field -->
     <div class="form-group mb-3">
         <label for="{{ form.username.id_for_label }}" class="fw-bold fs-5 text-dark">Username</label>
-        {{ form.username}}
+        {{ form.username|add_class:"form-control custom-username" }}
     </div>
 
     <!-- email Field -->
     <div class="form-group mb-3">
         <label for="{{ form.email.id_for_label }}" class="fw-bold fs-5 text-dark">Email</label>
-       {{ form.email}}
+       {{ form.email|add_class:"form-control custom-email" }}
     </div>
 
     <!-- Password Field 1 -->
     <div class="form-group mb-3">
         <label for="{{ form.password1.id_for_label }}" class="fw-bold fs-5 text-dark">Password</label>
-       {{ form.password1}}
+      {{ form.password1|add_class:"form-control custom-password1" }}
     </div>
     
     <!-- Password Field 2 -->
     <div class="form-group mb-3">
        <label for="{{ form.password2.id_for_label }}" class="fw-bold fs-5 text-dark">Confirm Password</label>
-        {{ form.password2}}
+        {{ form.password2|add_class:"form-control custom-password2" }}
     </div>
     
     <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+    <button type="submit" class="btn btn-dark w-100">Sign Up</button>
+    <a href="{% url 'login' %}" class="btn btn-dark mt-2" style="text-decoration: none; color: white;">
+        Already have an account? Login Here
+        </a>
 </form>
 
 </body>

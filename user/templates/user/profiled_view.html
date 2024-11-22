@@ -16,15 +16,15 @@
 
 <body class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <div class="mw-800 d-flex flex-column justify-content-between p-2 bg-light" style="height: 200px">
-        <div>
-            <h3>{{ profile.user.username }}'s Profile</h3>
+       <div class="bg-primary px-2 py-1 text-white" style="border-radius: 4px;">
+        <h5>{{ profile.user.username }}'s Profile</h5>
         </div>
-        <div class="bg-light p-3">
+        <div class="bg-light">
             <p class="pb-3"><strong>Bio:</strong> {{ profile.bio }}</p>
             <p><strong>Location:</strong> {{ profile.location }}</p>
         </div>
         <!-- Centered button at the bottom -->
-        <a href="{% url 'profile' %}" class="btn btn-primary style="text-decoration: none; color: white;">
+        <a href="{% url 'profile' %}" class="btn btn-primary" style="text-decoration: none; color: white;">
             Edit Profile
         </a>
     </div>

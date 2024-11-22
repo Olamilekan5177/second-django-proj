@@ -19,6 +19,8 @@ from django.urls import include, path
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from django.shortcuts import render
+from user.views import custom_signup_view 
+
 
 def index(request):
     return render(request, 'App/index.html')
@@ -27,7 +29,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('App/',include('App.urls')),
     path('user/',include('user.urls')),
-    path('', index, name='home'),  # Add this line for the root URL
+    path('', custom_signup_view, name='signup'), 
+    # Add this line for the root URL
     
 ]
 
