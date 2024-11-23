@@ -78,18 +78,32 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# import os
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'test1',
+#         'USER': 'moni',
+#         'PASSWORD': 'moni',    # Password for the PostgreSQL user
+#         'HOST': 'localhost',            # Host for pgAdmin
+#         'PORT': '5432',                 # Default PostgreSQL port
+#     }
+# }
+
 import os
+import dj_database_url
+from dotenv import load_dotenv
+
+load_dotenv()  # Load the .env file
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test1',
-        'USER': 'moni',
-        'PASSWORD': 'moni',    # Password for the PostgreSQL user
-        'HOST': 'localhost',            # Host for pgAdmin
-        'PORT': '5432',                 # Default PostgreSQL port
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')  # Make sure the variable is loaded properly
+    )
 }
+
+
 
 
 
