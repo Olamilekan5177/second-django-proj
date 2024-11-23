@@ -54,8 +54,13 @@ def profile_edit(request):
 
 @login_required
 def profiled_view(request):
-    profiled = get_object_or_404(UserProfile, user=request.user)
+    try:
+        profiled = UserProfile.objects.get(user=request.user)
+    except UserProfile.DoesNotExist:
+        return redirect('profile')  # Or handle the error in another way
+
     return render(request, 'user/profiled_view.html', {'profile': profiled})
+
 
 
 def custom_signup_view(request):
