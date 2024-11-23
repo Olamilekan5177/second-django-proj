@@ -16,9 +16,10 @@
 
 <body class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <div class="mw-800 d-flex flex-column justify-content-between p-2 bg-light" style="height: 200px">
-       <div class="bg-primary px-2 py-2 text-white" style="border-radius: 4px;">
-        <h5>{{ profile.user.username }}'s Profile</h5>
-        </div>
+       <div class="bg-primary px-2 py-2 text-white align-items-center justify-content-center d-flex" style="border-radius: 4px; height: 100px;">
+    <h5 class="m-auto">{{ profile.user.username }}'s Profile</h5>
+</div>
+
         <div class="bg-light">
             <p class="pb-3"><strong>Bio:</strong> {{ profile.bio }}</p>
             <p><strong>Location:</strong> {{ profile.location }}</p>
