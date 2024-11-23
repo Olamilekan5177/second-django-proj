@@ -77,16 +77,19 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+from decouple import config
+
 
 DATABASES = {
-    'default': {
+ 'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'IbIXzsbcWpvulghFjhDHyBmULYUYooia',
-        'HOST': 'autorack.proxy.rlwy.net',
-        'PORT': '41094',
+        'NAME': config('NAME'),
+        'USER': config('USER'),
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
+        'PORT': config('PORT', default='41094'),
     }
+    
 }
 
 
